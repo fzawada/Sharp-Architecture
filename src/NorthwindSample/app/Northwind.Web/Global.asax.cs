@@ -32,7 +32,7 @@ namespace Northwind.Web
 
             DataAnnotationsModelValidatorProvider.AddImplicitRequiredAttributeForValueTypes = false;
             ModelValidatorProviders.Providers.Add(new NHibernateValidatorProvider()); //Server side validation provider
-            ModelValidatorProviders.Providers.Add(new NHibernateValidatorClientProvider()); //Server side validation provider
+            ModelValidatorProviders.Providers.Add(new NHibernateValidatorClientProvider()); //Client side validation provider
 
             ModelBinders.Binders.DefaultBinder = new SharpModelBinder();
 
