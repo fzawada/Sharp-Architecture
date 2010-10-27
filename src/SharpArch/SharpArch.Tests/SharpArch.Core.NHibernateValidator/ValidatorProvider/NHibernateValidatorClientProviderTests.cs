@@ -11,9 +11,9 @@ using SharpArch.Core.NHibernateValidator.ValidatorProvider;
 namespace Tests.SharpArch.Core.NHibernateValidator.ValidatorProvider
 {
     [TestFixture]
-    public class NHibernateValidatorProviderTests
+    public class NHibernateValidatorClientProviderTests
     {
-        private NHibernateValidatorProvider _validatorProvider;
+        private NHibernateValidatorClientProvider _validatorProvider;
         private ViewDataDictionary<TestModel> _viewData;
         private ControllerContext _controllerContext;
 
@@ -44,7 +44,7 @@ namespace Tests.SharpArch.Core.NHibernateValidator.ValidatorProvider
         [SetUp]
         public void SetUp()
         {
-            _validatorProvider = new NHibernateValidatorProvider();
+            _validatorProvider = new NHibernateValidatorClientProvider();
             _viewData = new ViewDataDictionary<TestModel>();
             _controllerContext = new ControllerContext();
         }
@@ -106,7 +106,7 @@ namespace Tests.SharpArch.Core.NHibernateValidator.ValidatorProvider
 
             var modelValidators = _validatorProvider.GetValidators(modelMetadata, _controllerContext);
 
-            Assert.That(modelValidators, Is.Not.Empty);
+            Assert.That(modelValidators, Is.Not.Null);
 
             var validationRules = modelValidators.SelectMany(x => x.GetClientValidationRules()).ToList();
 
