@@ -73,18 +73,18 @@ namespace SharpArch.Core.NHibernateValidator.ValidatorProvider
 
             switch (rule.ValidationType)
             {
-                case "stringLength":
-                    var maxLength = (int)rule.ValidationParameters["maximumLength"];
+                case "length":
+                    var maxLength = (int)rule.ValidationParameters["max"];
                     return
                         new StringLengthAttribute(maxLength).FormatErrorMessage(propertyName);
                 case "required":
                     return new RequiredAttribute().FormatErrorMessage(propertyName);
                 case "range":
-                    var min = Convert.ToDouble(rule.ValidationParameters["minimum"]);
-                    var max = Convert.ToDouble(rule.ValidationParameters["maximum"]);
+                    var min = Convert.ToDouble(rule.ValidationParameters["min"]);
+                    var max = Convert.ToDouble(rule.ValidationParameters["max"]);
                     return
                         new System.ComponentModel.DataAnnotations.RangeAttribute(min, max).FormatErrorMessage(propertyName);
-                case "regularExpression":
+                case "regex":
                     var pattern = (string)rule.ValidationParameters["pattern"];
                     return new RegularExpressionAttribute(pattern).FormatErrorMessage(propertyName);
                 default:

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SharpArch">
+</Property><Property Name="Solution File" Value="D:\develop\Sharp-Architecture\src\SharpArch\SharpArch.sln">
+</Property><Property Name="Date" Value="16 listopada 2010">
+</Property><Property Name="Time" Value="08:41">
+</Property></Properties><Event ErrorLevel="0" Project="SharpArch.Core" Source="SharpArch.Core\SharpArch.Core.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.Core" Source="SharpArch.Core\SharpArch.Core.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.Data" Source="SharpArch.Data\SharpArch.Data.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.Data" Source="SharpArch.Data\SharpArch.Data.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.Web" Source="SharpArch.Web\SharpArch.Web.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.Web" Source="SharpArch.Web\SharpArch.Web.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.Tests" Source="SharpArch.Tests\SharpArch.Tests.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.Tests" Source="SharpArch.Tests\SharpArch.Tests.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.Testing.NUnit" Source="SharpArch.Testing.NUnit\SharpArch.Testing.NUnit.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.Testing.NUnit" Source="SharpArch.Testing.NUnit\SharpArch.Testing.NUnit.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.Testing" Source="SharpArch.Testing\SharpArch.Testing.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.Testing" Source="SharpArch.Testing\SharpArch.Testing.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.VsSharpArchTemplate" Source="SharpArch.VsSharpArchTemplate\SharpArch.VsSharpArchTemplate.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.VsSharpArchTemplate" Source="SharpArch.VsSharpArchTemplate\SharpArch.VsSharpArchTemplate.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.Web.Castle" Source="SharpArch.Web.Castle\SharpArch.Web.Castle.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.Web.Castle" Source="SharpArch.Web.Castle\SharpArch.Web.Castle.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.Core.NHibernateValidator" Source="SharpArch.Core.NHibernateValidator\SharpArch.Core.NHibernateValidator.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.Core.NHibernateValidator" Source="SharpArch.Core.NHibernateValidator\SharpArch.Core.NHibernateValidator.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.Testing.MbUnit" Source="SharpArch.Testing.MbUnit\SharpArch.Testing.MbUnit.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.Testing.MbUnit" Source="SharpArch.Testing.MbUnit\SharpArch.Testing.MbUnit.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.Wcf" Source="SharpArch.Wcf\SharpArch.Wcf.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.Wcf" Source="SharpArch.Wcf\SharpArch.Wcf.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.WcfClient.Castle" Source="SharpArch.WcfClient.Castle\SharpArch.WcfClient.Castle.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SharpArch.WcfClient.Castle" Source="SharpArch.WcfClient.Castle\SharpArch.WcfClient.Castle.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SharpArch.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="SharpArch.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SharpArch.Core" Source="SharpArch.Core\SharpArch.Core.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SharpArch.Data" Source="SharpArch.Data\SharpArch.Data.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SharpArch.Web" Source="SharpArch.Web\SharpArch.Web.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SharpArch.Tests" Source="SharpArch.Tests\SharpArch.Tests.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SharpArch.Testing.NUnit" Source="SharpArch.Testing.NUnit\SharpArch.Testing.NUnit.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SharpArch.Testing" Source="SharpArch.Testing\SharpArch.Testing.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SharpArch.VsSharpArchTemplate" Source="SharpArch.VsSharpArchTemplate\SharpArch.VsSharpArchTemplate.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SharpArch.Web.Castle" Source="SharpArch.Web.Castle\SharpArch.Web.Castle.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SharpArch.Core.NHibernateValidator" Source="SharpArch.Core.NHibernateValidator\SharpArch.Core.NHibernateValidator.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SharpArch.Testing.MbUnit" Source="SharpArch.Testing.MbUnit\SharpArch.Testing.MbUnit.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SharpArch.Wcf" Source="SharpArch.Wcf\SharpArch.Wcf.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SharpArch.WcfClient.Castle" Source="SharpArch.WcfClient.Castle\SharpArch.WcfClient.Castle.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

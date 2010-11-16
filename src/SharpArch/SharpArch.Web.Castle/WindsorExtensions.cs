@@ -16,7 +16,7 @@ namespace SharpArch.Web.Castle
         /// is found in the specified namespace.
         /// </summary>
         public static BasedOnDescriptor FirstNonGenericCoreInterface(this ServiceDescriptor descriptor, string interfaceNamespace) {
-            return descriptor.Select(delegate(Type type, Type baseType) {
+            return descriptor.Select(delegate(Type type, Type[] baseTypes) {
                 var interfaces = type.GetInterfaces()
                     .Where(t => t.IsGenericType == false && t.Namespace.StartsWith(interfaceNamespace));
                 
