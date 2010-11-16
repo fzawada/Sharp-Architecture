@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using SharpArch.Core.NHibernateValidator.CommonValidatorAdapter;
 using IValidator = SharpArch.Core.CommonValidator.IValidator;
 using SharpArch.Core.CommonValidator;
+using Castle.MicroKernel.Registration;
 
 namespace Tests.SharpArch.Core.CommonValidator.NHibernateValidator
 {
@@ -29,11 +30,9 @@ namespace Tests.SharpArch.Core.CommonValidator.NHibernateValidator
 
         public void InitServiceLocatorInitializer() {
             IWindsorContainer container = new WindsorContainer();
-            
-            container.AddComponent("duplicateChecker",
-                typeof(IEntityDuplicateChecker), typeof(DuplicateCheckerStub));
-            container.AddComponent("validator",
-                typeof(IValidator), typeof(Validator));
+
+			container.Register(Component.For<IEntityDuplicateChecker>().ImplementedBy<DuplicateCheckerStub>().Named("duplicateChecker"));
+			container.Register(Component.For<IValidator>().ImplementedBy<Validator>().Named("validator"));
 
             ServiceLocator.SetLocatorProvider(() => new WindsorServiceLocator(container));
         }

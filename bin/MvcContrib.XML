@@ -4,94 +4,6 @@
         <name>MvcContrib</name>
     </assembly>
     <members>
-        <member name="T:MvcContrib.ActionResults.PermanentRedirectResult">
-            <summary>
-            Action result that performs an HTTP 301 permanent redirect to a url.
-            </summary>
-            <example>
-            <![CDATA[
-            public PermanentRedirectResult OldActionName() {
-            	return new PermanentRedirectResult("http://www.asp.net/mvc/");
-            }
-            ]]>
-            </example>
-        </member>
-        <member name="M:MvcContrib.ActionResults.PermanentRedirectResult.#ctor">
-            <summary>
-            Creates a new instance of the PermanentRedirectResult class
-            </summary>
-        </member>
-        <member name="M:MvcContrib.ActionResults.PermanentRedirectResult.#ctor(System.String)">
-            <summary>
-            Creates a new instance of the PermanentRedirectResult class
-            </summary>
-            <param name="url"></param>
-        </member>
-        <member name="M:MvcContrib.ActionResults.PermanentRedirectResult.ExecuteResult(System.Web.Mvc.ControllerContext)">
-            <summary>
-            Sends an HTTP 301 Permanent Redirect to the result stream.
-            </summary>
-            <param name="context">The controller context for the current request.</param>
-        </member>
-        <member name="P:MvcContrib.ActionResults.PermanentRedirectResult.Url">
-            <summary>
-            The url.
-            </summary>
-        </member>
-        <member name="T:MvcContrib.ActionResults.PermanentRedirectToActionResult">
-            <summary>
-            Action Result that performs an HTTP 301 permanent redirect to an action.
-            </summary>
-            <example>
-            <![CDATA[
-            public PermanentRedirectToActionResult OldActionName(int id) {
-            	return new PermanentRedirectToActionResult("NewActionName", new { id = id });
-            }
-            ]]>
-            </example>
-        </member>
-        <member name="M:MvcContrib.ActionResults.PermanentRedirectToActionResult.#ctor(System.String)">
-            <summary>
-            Creates a new instance of the PermanentRedirectToActionResult class
-            </summary>
-            <param name="actionName">The name of the action.</param>
-        </member>
-        <member name="M:MvcContrib.ActionResults.PermanentRedirectToActionResult.#ctor(System.String,System.Object)">
-            <summary>
-            Creates a new instance of the PermanentRedirectToActionResult class
-            </summary>
-            <param name="actionName">The name of the action.</param>
-            <param name="routeValues">An object containing the parameters for a route. The parameters are retrieved via reflection by examining the properties of the object. Typically created using object initializer syntax.</param>
-        </member>
-        <member name="M:MvcContrib.ActionResults.PermanentRedirectToActionResult.#ctor(System.String,System.String,System.Object)">
-            <summary>
-            Creates a new instance of the PermanentRedirectToActionResult class
-            </summary>
-            <param name="actionName">The name of the action.</param>
-            <param name="controllerName">The name of the controller.</param>
-            <param name="routeValues">An object containing the parameters for a route. The parameters are retrieved via reflection by examining the properties of the object. Typically created using object initializer syntax.</param>
-        </member>
-        <member name="M:MvcContrib.ActionResults.PermanentRedirectToActionResult.ExecuteResult(System.Web.Mvc.ControllerContext)">
-            <summary>
-            Calculates the url based on the values passed, and sends an HTTP 301 Permanent Redirect to the result stream.
-            </summary>
-            <param name="context">The controller context for the current request.</param>
-        </member>
-        <member name="P:MvcContrib.ActionResults.PermanentRedirectToActionResult.ControllerName">
-            <summary>
-            The name of the controller.
-            </summary>
-        </member>
-        <member name="P:MvcContrib.ActionResults.PermanentRedirectToActionResult.ActionName">
-            <summary>
-            The name of the action.
-            </summary>
-        </member>
-        <member name="P:MvcContrib.ActionResults.PermanentRedirectToActionResult.RouteValues">
-            <summary>
-            An object containing the parameters for a route. The parameters are retrieved via reflection by examining the properties of the object. Typically created using object initializer syntax.
-            </summary>
-        </member>
         <member name="T:MvcContrib.ActionResults.RedirectToRouteResult`1">
             <summary>
             Represents a result that performs a redirect using a lambda expression to generate the route values.
@@ -133,6 +45,13 @@
             </summary>
             <param name="objectToSerialize">The object to serialize to XML.</param>
         </member>
+        <member name="M:MvcContrib.ActionResults.XmlResult.#ctor(System.Object,System.Xml.Serialization.XmlAttributeOverrides)">
+            <summary>
+            Creates a new instance of the XMLResult class.
+            </summary>
+            <param name="objectToSerialize">The object to serialize to XML.</param>
+            <param name="xmlAttributeOverrides"></param>
+        </member>
         <member name="M:MvcContrib.ActionResults.XmlResult.ExecuteResult(System.Web.Mvc.ControllerContext)">
             <summary>
             Serialises the object that was passed into the constructor to XML and writes the corresponding XML to the result stream.
@@ -142,35 +61,6 @@
         <member name="P:MvcContrib.ActionResults.XmlResult.ObjectToSerialize">
             <summary>
             The object to be serialized to XML.
-            </summary>
-        </member>
-        <member name="F:MvcContrib.Attributes.RequestStore.QueryString">
-            <summary>
-             Sets paramter values from Request.QueryString
-            </summary>
-        </member>
-        <member name="F:MvcContrib.Attributes.RequestStore.Form">
-            <summary>
-             Sets parameter values from Request.Form
-            </summary>
-        </member>
-        <member name="F:MvcContrib.Attributes.RequestStore.Params">
-            <summary>
-             Sets parameter values from all of the above locations in the above order
-             If a parameter value is found in more than one location, they will be returned in comma separated form in the above order
-             e.g. QueryString = 4, Form = 6 "4,6"
-            </summary>
-        </member>
-        <member name="F:MvcContrib.Attributes.RequestStore.TempData">
-            <summary>
-             Sets parameter values from Controller.TempData only
-            </summary>
-        </member>
-        <member name="F:MvcContrib.Attributes.RequestStore.All">
-            <summary>
-             Sets parameter values from all fo the above locations in the above order
-             If a parameter value is found in more than one location, they will be returned in comma separated form in the above order
-             e.g. QueryString = 4, Form = 6, TempData = 2, RouteData = 1 "4,6,3,2"
             </summary>
         </member>
         <member name="T:MvcContrib.Attributes.DerivedTypeBinderAwareAttribute">
@@ -325,8 +215,8 @@
         <member name="T:MvcContrib.Filters.PassParametersDuringRedirectAttribute">
             <summary>
             When placed on a controller or action, this attribute will ensure
-            that parameters passed into RedirectToAction&lt;T&gt;() will get
-            passed to the controller or action that this attribute is placed on.
+            that reference-type-parameters (or value types which cannot be converted from a string) passed into 
+            RedirectToAction&lt;T&gt;() will get passed to the controller or action that this attribute is placed on.
             </summary>
         </member>
         <member name="M:MvcContrib.Filters.PassParametersDuringRedirectAttribute.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
@@ -685,16 +575,11 @@
             <param name="objectToConvert">The object to convert</param>
             <returns>A generic dictionary</returns>
         </member>
-        <member name="T:MvcContrib.HttpContextExtensions">
+        <member name="M:MvcContrib.DictionaryExtensions.ToHtmlAttributes(System.Collections.Generic.IDictionary{System.String,System.Object})">
             <summary>
-            Static class containing extenstion to HttpContextBase
+            Converts a dictionary into a string of HTML attributes
             </summary>
-        </member>
-        <member name="M:MvcContrib.HttpContextExtensions.IsAjax(System.Web.HttpRequestBase)">
-            <summary>
-            Determines if the current request is an ajax request
-            </summary>
-            <param name="request">Instance of the HttpRequestBase for the request</param>
+            <param name="attributes"></param>
             <returns></returns>
         </member>
         <member name="T:MvcContrib.ISubController">
@@ -910,6 +795,12 @@
             <summary>
              Use this class to define url->controller action mappings
             </summary>
+        </member>
+        <member name="M:MvcContrib.Routing.MvcRoute.MapUrl(System.String)">
+            <summary>
+             Fluent interface start method
+            </summary>
+            <param name="url">The url pattern</param>
         </member>
         <member name="M:MvcContrib.Routing.MvcRoute.MappUrl(System.String)">
             <summary>
@@ -1210,45 +1101,6 @@
             Reads view as a stream.
             </summary>
         </member>
-        <member name="T:MvcContrib.NameValueDeserializer">
-            <summary>
-            Provides the ability to deserialize a Request into a CLR object.
-            </summary>
-        </member>
-        <member name="M:MvcContrib.NameValueDeserializer.Deserialize``1(System.Collections.Specialized.NameValueCollection,System.String)">
-            <summary>
-            Deserializes the specified request collection.
-            </summary>
-            <typeparam name="T">The type to deserialize to.</typeparam>
-            <param name="collection">The collection.</param>
-            <param name="prefix">The prefix.</param>
-            <returns>The deserialized object</returns>
-        </member>
-        <member name="M:MvcContrib.NameValueDeserializer.Deserialize``1(System.Collections.Specialized.NameValueCollection)">
-            <summary>
-            Deserializes the specified request collection.
-            </summary>
-            <typeparam name="T">The type to deserialize to.</typeparam>
-            <param name="collection">The collection.</param>
-            <returns>The deserialized object</returns>
-        </member>
-        <member name="M:MvcContrib.NameValueDeserializer.Deserialize(System.Collections.Specialized.NameValueCollection,System.Type)">
-            <summary>
-            Deserializes the specified request collection.
-            </summary>
-            <param name="collection">The collection.</param>
-            <param name="targetType">Type of the target.</param>
-            <returns>The deserialized object</returns>
-        </member>
-        <member name="M:MvcContrib.NameValueDeserializer.Deserialize(System.Collections.Specialized.NameValueCollection,System.String,System.Type)">
-            <summary>
-            Deserializes the specified request collection.
-            </summary>
-            <param name="collection">The collection.</param>
-            <param name="prefix">The prefix.</param>
-            <param name="targetType">Type of the target.</param>
-            <returns>The deserialized object</returns>
-        </member>
         <member name="T:MvcContrib.SimplyRestful.SimplyRestfulRouteHandler">
             <summary>A Rails inspired Restful Routing Handler</summary>
         </member>
@@ -1520,64 +1372,26 @@
             <param name="tableAttributes">The table attributes.</param>
             <returns></returns>
         </member>
-        <member name="T:MvcContrib.UI.Grid.GridModel`1">
+        <member name="T:MvcContrib.UI.Grid.AutoColumnBuilder`1">
             <summary>
-            Default model for grid
+            Can be used to build column using metadata
             </summary>
         </member>
-        <member name="T:MvcContrib.UI.Grid.IGridModel`1">
+        <member name="T:MvcContrib.UI.Grid.ColumnBuilder`1">
             <summary>
-            Defines a grid model
+            Builds grid columns
             </summary>
         </member>
-        <member name="M:MvcContrib.UI.Grid.GridModel`1.#ctor">
+        <member name="M:MvcContrib.UI.Grid.ColumnBuilder`1.Custom(System.Func{`0,System.Object})">
             <summary>
-            Creates a new instance of the GridModel class
+            Creates a column for custom markup.
             </summary>
         </member>
-        <member name="M:MvcContrib.UI.Grid.GridModel`1.Empty(System.String)">
+        <member name="M:MvcContrib.UI.Grid.ColumnBuilder`1.For(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
             <summary>
-            Text that will be displayed when the grid has no data.
+            Specifies a column should be constructed for the specified property.
             </summary>
-            <param name="emptyText">Text to display</param>
-        </member>
-        <member name="M:MvcContrib.UI.Grid.GridModel`1.Attributes(System.Func{System.Object,System.Object}[])">
-            <summary>
-            Defines additional attributes for the grid.
-            </summary>
-            <param name="hash"></param>
-        </member>
-        <member name="M:MvcContrib.UI.Grid.GridModel`1.Attributes(System.Collections.Generic.IDictionary{System.String,System.Object})">
-            <summary>
-            Defines additional attributes for the grid
-            </summary>
-            <param name="attributes"></param>
-        </member>
-        <member name="M:MvcContrib.UI.Grid.GridModel`1.RenderUsing(MvcContrib.UI.Grid.IGridRenderer{`0})">
-            <summary>
-            Specifies the Renderer to use with this grid. If omitted, the HtmlTableGridRenderer will be used. 
-            </summary>
-            <param name="renderer">The Renderer to use</param>
-        </member>
-        <member name="M:MvcContrib.UI.Grid.GridModel`1.Sort(MvcContrib.UI.Grid.GridSortOptions)">
-            <summary>
-            Secifies that the grid is currently being sorted by the specified column in a particular direction.
-            </summary>
-        </member>
-        <member name="P:MvcContrib.UI.Grid.GridModel`1.Column">
-            <summary>
-            Column builder for this grid model
-            </summary>
-        </member>
-        <member name="P:MvcContrib.UI.Grid.GridModel`1.MvcContrib#UI#Grid#IGridModel{T}#Sections">
-            <summary>
-            Section overrides for this grid model.
-            </summary>
-        </member>
-        <member name="P:MvcContrib.UI.Grid.GridModel`1.Sections">
-            <summary>
-            Section overrides for this grid model.
-            </summary>
+            <param name="propertySpecifier">Lambda that specifies the property for which a column should be constructed</param>
         </member>
         <member name="T:MvcContrib.UI.Grid.ActionSyntax.ActionSyntaxExtensions">
             <summary>
@@ -1621,23 +1435,6 @@
             <param name="action">The action to render</param>
             <returns></returns>
         </member>
-        <member name="T:MvcContrib.UI.Grid.ColumnBuilder`1">
-            <summary>
-            Builds grid columns
-            </summary>
-        </member>
-        <member name="M:MvcContrib.UI.Grid.ColumnBuilder`1.For(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
-            <summary>
-            Specifies a column should be constructed for the specified property.
-            </summary>
-            <param name="propertySpecifier">Lambda that specifies the property for which a column should be constructed</param>
-        </member>
-        <member name="M:MvcContrib.UI.Grid.ColumnBuilder`1.For(System.String)">
-            <summary>
-            Specifies that a custom column should be constructed with the specified name.
-            </summary>
-            <param name="name"></param>
-        </member>
         <member name="T:MvcContrib.UI.Grid.GridColumn`1">
             <summary>
             Column for the grid
@@ -1680,6 +1477,11 @@
             <param name="isVisible"></param>
             <returns></returns>
         </member>
+        <member name="M:MvcContrib.UI.Grid.IGridColumn`1.Encode(System.Boolean)">
+            <summary>
+            Determines whether or not the column should be encoded. Default is true.
+            </summary>
+        </member>
         <member name="M:MvcContrib.UI.Grid.IGridColumn`1.DoNotEncode">
             <summary>
             Do not HTML Encode the output
@@ -1707,6 +1509,21 @@
             </summary>
             <param name="isColumnSortable"></param>
             <returns></returns>
+        </member>
+        <member name="M:MvcContrib.UI.Grid.IGridColumn`1.SortColumnName(System.String)">
+            <summary>
+            Specifies a custom name that should be used when sorting on this column
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcContrib.UI.Grid.IGridColumn`1.InsertAt(System.Int32)">
+            <summary>
+            Specifies the position of a column. 
+            This is usually used in conjunction with the AutoGenerateColumns method 
+            in order to specify where additional custom columns should be placed.
+            </summary>
+            <param name="index">The index at which the column should be inserted</param>
         </member>
         <member name="P:MvcContrib.UI.Grid.IGridColumn`1.CustomHeaderRenderer">
             <summary>
@@ -1766,6 +1583,71 @@
             Additional attributes for the cell
             </summary>
         </member>
+        <member name="T:MvcContrib.UI.Grid.GridModel`1">
+            <summary>
+            Default model for grid
+            </summary>
+        </member>
+        <member name="T:MvcContrib.UI.Grid.IGridModel`1">
+            <summary>
+            Defines a grid model
+            </summary>
+        </member>
+        <member name="M:MvcContrib.UI.Grid.GridModel`1.#ctor">
+            <summary>
+            Creates a new instance of the GridModel class
+            </summary>
+        </member>
+        <member name="M:MvcContrib.UI.Grid.GridModel`1.Empty(System.String)">
+            <summary>
+            Text that will be displayed when the grid has no data.
+            </summary>
+            <param name="emptyText">Text to display</param>
+        </member>
+        <member name="M:MvcContrib.UI.Grid.GridModel`1.Attributes(System.Func{System.Object,System.Object}[])">
+            <summary>
+            Defines additional attributes for the grid.
+            </summary>
+            <param name="hash"></param>
+        </member>
+        <member name="M:MvcContrib.UI.Grid.GridModel`1.Attributes(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Defines additional attributes for the grid
+            </summary>
+            <param name="attributes"></param>
+        </member>
+        <member name="M:MvcContrib.UI.Grid.GridModel`1.RenderUsing(MvcContrib.UI.Grid.IGridRenderer{`0})">
+            <summary>
+            Specifies the Renderer to use with this grid. If omitted, the HtmlTableGridRenderer will be used. 
+            </summary>
+            <param name="renderer">The Renderer to use</param>
+        </member>
+        <member name="M:MvcContrib.UI.Grid.GridModel`1.Sort(MvcContrib.UI.Grid.GridSortOptions)">
+            <summary>
+            Secifies that the grid is currently being sorted by the specified column in a particular direction.
+            </summary>
+        </member>
+        <member name="M:MvcContrib.UI.Grid.GridModel`1.Sort(MvcContrib.UI.Grid.GridSortOptions,System.String)">
+            <summary>
+            Specifies that the grid is currently being sorted by the specified column in a particular direction.
+            This overload allows you to specify a prefix.
+            </summary>
+        </member>
+        <member name="P:MvcContrib.UI.Grid.GridModel`1.Column">
+            <summary>
+            Column builder for this grid model
+            </summary>
+        </member>
+        <member name="P:MvcContrib.UI.Grid.GridModel`1.MvcContrib#UI#Grid#IGridModel{T}#Sections">
+            <summary>
+            Section overrides for this grid model.
+            </summary>
+        </member>
+        <member name="P:MvcContrib.UI.Grid.GridModel`1.Sections">
+            <summary>
+            Section overrides for this grid model.
+            </summary>
+        </member>
         <member name="T:MvcContrib.UI.Grid.Grid`1">
             <summary>
             Defines a grid to be rendered.
@@ -1816,6 +1698,11 @@
         <member name="M:MvcContrib.UI.Grid.Syntax.IGridWithOptions`1.Sort(MvcContrib.UI.Grid.GridSortOptions)">
             <summary>
             Specifies that the grid is currently sorted
+            </summary>
+        </member>
+        <member name="M:MvcContrib.UI.Grid.Syntax.IGridWithOptions`1.Sort(MvcContrib.UI.Grid.GridSortOptions,System.String)">
+            <summary>
+            Specifies that the grid is sorted. Column links will have the specified prefix prepended.
             </summary>
         </member>
         <member name="M:MvcContrib.UI.Grid.Syntax.IGridWithOptions`1.Render">
@@ -1934,14 +1821,6 @@
             </summary>
             <param name="column">The current column</param>
             <param name="header">The format to use.</param>
-            <returns></returns>
-        </member>
-        <member name="M:MvcContrib.UI.Grid.GridExtensions.Partial``1(MvcContrib.UI.Grid.IGridColumn{``0},System.String)">
-            <summary>
-            Specifies that a partial view should be used to render the contents of this column.
-            </summary>
-            <param name="column">The current column</param>
-            <param name="partialName">The name of the partial view</param>
             <returns></returns>
         </member>
         <member name="M:MvcContrib.UI.Grid.GridExtensions.HeaderRowAttributes``1(MvcContrib.UI.Grid.IGridSections{``0},System.Collections.Generic.IDictionary{System.String,System.Object})">
@@ -2406,12 +2285,12 @@
             Renders a pager component from an IPagination datasource.
             </summary>
         </member>
-        <member name="M:MvcContrib.UI.Pager.Pager.#ctor(MvcContrib.Pagination.IPagination,System.Web.HttpRequestBase)">
+        <member name="M:MvcContrib.UI.Pager.Pager.#ctor(MvcContrib.Pagination.IPagination,System.Web.Mvc.ViewContext)">
             <summary>
             Creates a new instance of the Pager class.
             </summary>
             <param name="pagination">The IPagination datasource</param>
-            <param name="request">The current HTTP Request</param>
+            <param name="context">The view context</param>
         </member>
         <member name="M:MvcContrib.UI.Pager.Pager.QueryParam(System.String)">
             <summary>
